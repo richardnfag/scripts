@@ -41,7 +41,7 @@ with tarfile.open('/tmp/' + path) as tar:
 print("Installing...")
 move('/tmp/' + dir_name, '/usr/lib/jvm/graalvm/')
 
-system("alternatives --install /usr/bin/java java /usr/lib/jvm/graalvm/bin/java 1")
-system("alternatives --set java /usr/lib/jvm/graalvm/bin/java")
+system("update-alternatives --install /usr/bin/java java /usr/lib/jvm/graalvm/bin/java 1")
+system("update-alternatives --set java /usr/lib/jvm/graalvm/bin/java")
 
 print("Done!")
